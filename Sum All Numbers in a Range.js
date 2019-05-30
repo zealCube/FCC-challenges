@@ -2,10 +2,11 @@
 //The lowest number will not always come first.
 
 function sumAll(arr) {
-    return 1;
-  }
+    arr.sort( (a,b) => a-b); //sorts the array in ascending order
+     
+}
   
-  sumAll([1, 4]);
+  console.log(sumAll([1,4]));
 
 
 //sumAll([1, 4]) should return 10.
