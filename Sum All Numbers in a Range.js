@@ -3,10 +3,12 @@
 
 function sumAll(arr) {
     arr.sort( (a,b) => a-b); //sorts the array in ascending order
-     
+    let x = arr[0];
+    let y = arr[1];
+    return ((y*y)+y-(x*x)+x)/2  // formula for the sum
 }
   
-  console.log(sumAll([1,4]));
+  console.log(sumAll([5,4]));
 
 
 //sumAll([1, 4]) should return 10.
