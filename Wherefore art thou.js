@@ -2,14 +2,17 @@
 //Each name and value pair of the source object has to be present in the object from the collection if it is to be included in the returned array.
 
 function whatIsInAName(collection, source) {
-    // What's in a name?
-    var arr = [];
-    // Only change code below this line
-    
-    
-    // Only change code above this line
-    return arr;
-  }
-   
-  whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", 
-  last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
+    var keys = Object.keys(source);
+
+    return collection.filter(function(x) {
+      for (let key of keys) {
+        if (!x.hasOwnProperty(key) || x[key] !== source[key]) {
+          return false;
+        }
+      }
+      return true;
+    });
+}
+
+  console.log(whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", 
+  last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" }));
