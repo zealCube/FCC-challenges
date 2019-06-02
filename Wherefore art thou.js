@@ -5,7 +5,7 @@ function whatIsInAName(collection, source) {
     //var keys = Object.keys(source);
 
     return collection.filter(function (x) {
-        for (let key in source) {
+        for (let key in source) {       // if you use (let .. in, insteaf of "let .. of" you do not have to use separate object in keys)
             if (!x.hasOwnProperty(key) || x[key] !== source[key]) {
                 return false;
             }
