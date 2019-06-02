@@ -5,3 +5,6 @@ function spinalCase(str) {
 }
 
 console.log(spinalCase('The_Andy_Griffith_show'));
+
+//better one 
+// return str.split(/\s|_|(?=[A-Z])/).join('-').toLowerCase() - eh, what can you do
