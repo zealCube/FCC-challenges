@@ -2,10 +2,10 @@
 //Each name and value pair of the source object has to be present in the object from the collection if it is to be included in the returned array.
 
 function whatIsInAName(collection, source) {
-    var keys = Object.keys(source);
+    //var keys = Object.keys(source);
 
     return collection.filter(function (x) {
-        for (let key of keys) {
+        for (let key in source) {
             if (!x.hasOwnProperty(key) || x[key] !== source[key]) {
                 return false;
             }
