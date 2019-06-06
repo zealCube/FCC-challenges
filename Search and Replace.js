@@ -5,7 +5,7 @@
 //Note: Preserve the case of the first character in the original word.
 
 function myReplace(str, before, after) {
-  if (before.search(/^[A-Z]/) == 0) {
+  if (before.search(/[A-Z]/) == 0) {
     return str.replace(before, (after.charAt(0).toUpperCase() + after.slice(1)));
   }
   return str.replace(before, after);
