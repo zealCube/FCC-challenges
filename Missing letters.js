@@ -4,7 +4,13 @@
 
 
 function fearNotLetter(str) {
-    return str;
-  }
-  
-  fearNotLetter("abce");
+    for (let i = 0; i < str.length - 1; i++) {
+        if (str.charCodeAt(i) + 1 !== str.charCodeAt(i + 1)) {
+            return String.fromCharCode(str.charCodeAt(i) + 1);
+        }
+    }
+}
+
+console.log(fearNotLetter("abce"));
+
+//I stole this solution of net, as it was so elegant I could not resist
