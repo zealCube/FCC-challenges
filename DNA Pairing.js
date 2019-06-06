@@ -4,7 +4,22 @@
 //for the input GCG, return [["G", "C"], ["C","G"],["G", "C"]]
 
 function pairElement(str) {
-    return str;
-  }
-  
-  pairElement("GCG");
+    var arr = [];
+    while (arr.push([]) < str.length);
+    var arr2 = str.split("");
+    for (let i = 0; i < arr2.length; i++) {
+        arr[i].splice(i, 0, arr2[i]);
+    }
+
+
+
+    //function pairs(elem) {
+    //    if (elem == G) {
+
+    //    }
+    //}
+
+    return arr;
+}
+
+console.log(pairElement("GCGTAT"));
