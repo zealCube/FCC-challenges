@@ -3,7 +3,7 @@
 //Return the provided character as the first element in each array.
 //for the input GCG, return [["G", "C"], ["C","G"],["G", "C"]]
 
-function pairElement(str) {     //This does not run in FCC, but I ca not figure out why
+function pairElement(str) {     //This does not run in FCC, but I can not figure out why
     var arr = [];
     while (arr.push([]) < str.length);
     var arr2 = str.split("");
