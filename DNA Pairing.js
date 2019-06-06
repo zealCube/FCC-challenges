@@ -3,24 +3,24 @@
 //Return the provided character as the first element in each array.
 //for the input GCG, return [["G", "C"], ["C","G"],["G", "C"]]
 
-function pairElement(str) {     //This does not run in FCC, but I can not figure out why
+function pairElement(str) { 
     var arr = [];
-    while (arr.push([]) < str.length);
+    while (arr.push([]) < str.length); //here it has to be "{}" at the end of the while statement to pass FCC
     var arr2 = str.split("");
     for (let i = 0; i < arr2.length; i++) {
         arr[i].splice(i, 0, arr2[i]);
     }
-        for (let j = 0; j < arr.length; j++) {
-            if (arr[j] == "G") {
-                arr[j].push("C");
-            } else if (arr[j] == "C") {
-                arr[j].push("G");
-            } else if (arr[j] == "T") {
-                arr[j].push("A");
-            } else if (arr[j] == "A") {
-                arr[j].push("T");
-            }
+    for (let j = 0; j < arr.length; j++) {
+        if (arr[j] == "G") {
+            arr[j].push("C");
+        } else if (arr[j] == "C") {
+            arr[j].push("G");
+        } else if (arr[j] == "T") {
+            arr[j].push("A");
+        } else if (arr[j] == "A") {
+            arr[j].push("T");
         }
+    }
 
     return arr;
 }
