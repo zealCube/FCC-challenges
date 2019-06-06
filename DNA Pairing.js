@@ -11,15 +11,19 @@ function pairElement(str) {
         arr[i].splice(i, 0, arr2[i]);
     }
 
-
-
-    //function pairs(elem) {
-    //    if (elem == G) {
-
-    //    }
-    //}
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] == "G") {
+            arr[i].push("C");
+        } else if (arr[i] == "C") {
+            arr[i].push("G");
+        } else if (arr[i] == "T") {
+            arr[i].push("A");
+        } else if (arr[i] == "A") {
+            arr[i].push("T");
+        }
+    }
 
     return arr;
 }
 
-console.log(pairElement("GCGTAT"));
+console.log(pairElement("GCG"));
