@@ -3,8 +3,13 @@
 //The unique numbers should be sorted by their original order, but the final array should not be sorted in numerical order.
 
 
-function uniteUnique(arr) {
-    return arr;
+function uniteUnique() {
+  var val = [];
+  for (let i = 0; i < arguments.length; i++) {
+    val = val.concat(arguments[i]);
   }
-  
-  uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
+  var uniq = [...new Set(val)];
+  return uniq;
+}
+
+console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]));
