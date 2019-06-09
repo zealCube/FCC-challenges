@@ -2,8 +2,15 @@
 //as well as by all sequential numbers in the range between these parameters.
 
 function smallestCommons(arr) {
-    return arr;
+
+  arr = arr.sort((a, b) => a - b);
+  var arr2 = [arr[0]];
+  for (i = arr[0] + 1; i <= arr[1]; i++) {
+    arr2.push(i);
   }
-  
-  
-  smallestCommons([1,5]);
+  return arr2;
+
+}
+
+
+console.log(smallestCommons([2, 5]));
