@@ -10,6 +10,15 @@ function smallestCommons(arr) {
   }
   return arr2;
 
+  function gcd(x, y) {
+    if (y === 0) {
+      return x;
+    } else if (x > y && y > 0) {
+      return gcd(y, x % y)
+    } else {
+      return gcd(y, x);
+    }
+  }
 }
 
 
