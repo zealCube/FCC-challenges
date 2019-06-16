@@ -3,13 +3,17 @@ until the function func returns true when the iterated element is passed through
 Then return the rest of the array once the condition is satisfied, otherwise, arr=[]*/
 
 function dropElements(arr, func) {
-    for (let i = 0; i < arr.length; i++) {
-        return func(arr[i]) ? arr.shift() : arr; //if not true, modify array by removing first element
-                                                // if true, return the modified array
+    var times=arr.length;
+    for (let i = 0; i < times; i++) {
+        if (func(arr[0])) {
+            break;
+        } else {
+            arr.shift();
+        }
     }
     return arr;
 }
 
-console.log(dropElements([8, 4, 5, 3], function (n) {
-    return n < 5;
+console.log(dropElements([8, 4, 6, 3], function (n) {
+    return n < 2;
 }));
