@@ -2,24 +2,24 @@
 //as well as by all sequential numbers in the range between these parameters.
 
 function smallestCommons(arr) {
-
-  arr = arr.sort((a, b) => a - b);
-  var arr2 = [arr[0]];
-  for (i = arr[0] + 1; i <= arr[1]; i++) {
-    arr2.push(i);
+  function gcd(a, b) {
+    return !b ? a : gcd(b, a % b);
   }
-  return arr2;
 
-  function gcd(x, y) {
-    if (y === 0) {
-      return x;
-    } else if (x > y && y > 0) {
-      return gcd(y, x % y)
-    } else {
-      return gcd(y, x);
-    }
+  function lcm(a, b) {
+    return (a * b) / gcd(a, b);
   }
+
+	if(arr[0] > arr[1]) (arr = [arr[1], arr[0]]);
+
+	for(x = result = arr[0]; x <= arr[1]; x++) {
+		result = lcm(x, result);
+	}
+	
+	return result; 
 }
 
 
-console.log(smallestCommons([2, 5]));
+console.log(smallestCommons([25, 5]));
+
+//I borrowed couple ouf things and put them together
