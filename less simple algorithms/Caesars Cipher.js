@@ -1,9 +1,10 @@
 //Ceasar cypher using rot13
 
 function rot13(str) { // LBH QVQ VG!
-  
-    return str;
-  }
-  
-  // Change the inputs below to test
-  rot13("SERR PBQR PNZC");
+  var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  var tmp = alphabet.concat(alphabet).split("");
+  return str.replace(/[A-Z]/g, x => tmp[tmp.indexOf(x) + 13]);
+
+}
+// Change the inputs below to test
+console.log(rot13("SERR CVMMN!"));
