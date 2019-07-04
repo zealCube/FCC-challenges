@@ -1,7 +1,7 @@
 //Return true if the passed string looks like a valid US phone number.
 
 function telephoneCheck(str) {
-    if (str.match(/[0-9]/g).length > 11) {
+    if (str.match(/[0-9]/g).length > 11 | str.match(/[0-9]/g).length < 10) {
         return false;
     } else if (str.match(/[0-9]/g).length = 11) {
         if (str.charAt(0) != 1) {
@@ -21,4 +21,4 @@ function telephoneCheck(str) {
     }
 }
 
-console.log(telephoneCheck("23555-555-5555"));
+console.log(telephoneCheck("5-555-5555"));
